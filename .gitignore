@@ -150,9 +150,6 @@ publish/
 !**/packages/build/
 # Uncomment if necessary however generally it will be regenerated when needed
 #!**/packages/repositories.config
-# NuGet v3's project.json files produces more ignoreable files
-*.nuget.props
-*.nuget.targets
 
 # Microsoft Azure Build Output
 csx/
@@ -234,3 +231,39 @@ _Pvt_Extensions
 
 # FAKE - F# Make
 .fake/
+
+*.opensdf
+*.sdf
+*.suo
+mark.udf
+/.svn
+/code/cocos2d
+/code/cocos2d/cocos/2d/Debug.win32
+/code/cocos2d/cocos/editor-support/spine/proj.win32/Debug.win32
+/code/cocos2d/cocos/platform/android/java/local.properties
+/code/proj.android/obj
+/code/proj.android/libs
+/code/proj.android/local.properties
+/code/cocos2d/external/Box2D/proj.win32/Debug.win32
+/code/cocos2d/external/bullet/proj.win32/Debug.win32
+*.a
+*.so
+Debug.win32
+*.pch
+*.user
+/code/Resources/fonts
+/code/Resources/res
+/code/Resources/HelloWorld.png
+/code/Resources/CloseNormal.png
+/code/Resources/CloseSelected.png
+/code/cocos2d/cocos/platform/android/java/bin
+/code/cocos2d/cocos/platform/android/java/gen
+/code/cocos2d/cocos/platform/android/java/libs
+/code/cocos2d/cocos/platform/android/java/res
+/code/bin
+/code/proj.android/assets
+/code/proj.android/bin
+/code/proj.android/gen
+/code/proj.win32/UpgradeLog.htm
+/code/proj.win32/Backup
+/art/studio/Resources/res

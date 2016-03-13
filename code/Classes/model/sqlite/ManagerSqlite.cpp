@@ -1,5 +1,7 @@
 #include "ManagerSqlite.h"
 
+USING_NS_CC;
+
 static ManagerSqlite *_instance;
 
 ManagerSqlite * ManagerSqlite::getInstance()

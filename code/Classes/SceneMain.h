@@ -1,5 +1,5 @@
-#ifndef _SCENE_MAIN_H_
-#define _SCENE_MAIN_H_
+#ifndef __SCENE_MAIN_H__
+#define __SCENE_MAIN_H__
 
 #include "cocos2d.h"
 
@@ -14,7 +14,7 @@ public:
 	virtual bool init();
 
 private:
-	cocos2d::Scene *_skin;
+	
 };
 
 #endif

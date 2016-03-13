@@ -1,5 +1,5 @@
-#ifndef _CORE_ENTITY_CREATURE_H_
-#define _CORE_ENTITY_CREATURE_H_
+#ifndef __CORE_ENTITY_CREATURE_H__
+#define __CORE_ENTITY_CREATURE_H__
 
 #include "Unit.h"
 

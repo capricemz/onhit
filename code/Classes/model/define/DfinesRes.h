@@ -1,11 +1,9 @@
-#ifndef _MODEL_DEFINE_DEFINE_RES_H_
-#define _MODEL_DEFINE_DEFINE_RES_H_
+#ifndef __MODEL_DEFINE_DEFINE_RES_H__
+#define __MODEL_DEFINE_DEFINE_RES_H__
 
 #include <string>
 
-using namespace std;
-
-static const string RES_LAYER_MAIN = "LayerMain.csb";
+static const std::string RES_LAYER_MAIN = "LayerMain.csb";
 
 
 #endif

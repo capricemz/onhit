@@ -3,8 +3,6 @@
 
 #include <map>
 
-using namespace std;
-
 class Observer
 {
 public:
@@ -33,7 +31,7 @@ protected:
 	Subject();
 	
 private:
-	map<int, Observer *> _map;
+	std::map<int, Observer *> _map;
 
 };
 

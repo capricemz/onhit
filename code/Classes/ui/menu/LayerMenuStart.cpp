@@ -1,12 +1,13 @@
 #include "LayerMenuStart.h"
 #include "model/define/DfinesRes.h"
+#include "model/define/DfinesValue.h"
 #include "cocostudio/ActionTimeline/CSLoader.h"
 #include "ui/UIButton.h"
 
 USING_NS_CC;
 using namespace ui;
 
-LayerMenuStart::LayerMenuStart() : _handleMenuStart(nullptr)
+LayerMenuStart::LayerMenuStart() : _skin(nullptr), _handleMenuStart(nullptr)
 {
 }
 
@@ -28,14 +29,19 @@ bool LayerMenuStart::init()
 		addChild(_skin);
 
 		auto btn = (Button *)_skin->getChildByName(btn0);
+		btn->setTitleText(VALUE_MENU_START);
 		btn->addTouchEventListener(CC_CALLBACK_2(LayerMenuStart::onTouchBtn, this));
+		
 		btn = (Button *)_skin->getChildByName(btn1);
+		btn->setTitleText(VALUE_MENU_SAVE_LOAD);
 		btn->addTouchEventListener(CC_CALLBACK_2(LayerMenuStart::onTouchBtn, this));
+		
 		btn = (Button *)_skin->getChildByName(btn2);
+		btn->setTitleText(VALUE_MENU_SETTING);
 		btn->addTouchEventListener(CC_CALLBACK_2(LayerMenuStart::onTouchBtn, this));
 
 		_handleMenuStart = new HandleMenuStart();
-		_handleMenuStart->retain();
+		CC_SAFE_RETAIN(_handleMenuStart);
 		_handleMenuStart->setLayerMenuStart(this);
 
 		isInit = true;

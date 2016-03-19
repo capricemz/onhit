@@ -2,9 +2,9 @@
 
 USING_NS_CC;
 
-static ManagerSqlite *_instance;
+static ManagerSqlite* _instance;
 
-ManagerSqlite * ManagerSqlite::getInstance()
+ManagerSqlite* ManagerSqlite::getInstance()
 {
 	if (_instance == nullptr)
 	{

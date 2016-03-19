@@ -3,8 +3,30 @@
 
 #include <string>
 
-static const std::string VALUE_MENU_START = "开始";
-static const std::string VALUE_MENU_SAVE_LOAD = "saveload";
-static const std::string VALUE_MENU_SETTING = "setting";
+#define NUM_GRAVITY -10.0f
+#define NUM_PTM_RATIO 32.0f//像素到米的转化值
+#define NUM_VELOCITY_ITERATIONS 8//
+#define NUM_POSITION_ITERATIONS 8//
+
+#define STR_MENU_START "START"
+#define STR_MENU_SAVE_LOAD "S&L"
+#define STR_MENU_SETTING "SET"
+
+enum class ID_OBSERVER
+{
+	HANDLE_SCENE_MAIN,
+	HANDLE_LAYER_ENTITY
+};
+
+enum class TYPE_OBSERVER_HANDLE_SCENE_MAIN
+{
+	LAYER_MENU_START_ADD,
+	LAYER_MENU_START_REMOVE
+};
+
+enum class TYPE_OBSERVER_HANDLE_ENTITY
+{
+	LAYER_ENTITY_START_ENGINE
+};
 
 #endif

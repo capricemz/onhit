@@ -13,19 +13,18 @@ public:
 	LayerMenuStart();
 	~LayerMenuStart();
 
+	virtual cocos2d::Layer* getSkin() { return _skin; }
+	
 	virtual bool init();
-
-	void onTouchBtn(cocos2d::Ref *ref, cocos2d::ui::Widget::TouchEventType type);
-
-	virtual cocos2d::Layer * getSkin() { return _skin; }
+	void onTouchBtn(cocos2d::Ref* ref, cocos2d::ui::Widget::TouchEventType type);
 
 private:
 	const std::string btn0 = "btn0";
 	const std::string btn1 = "btn1";
 	const std::string btn2 = "btn2";
 
-	cocos2d::Layer *_skin;
-	HandleMenuStart *_handleMenuStart;
+	cocos2d::Layer* _skin;
+	HandleMenuStart* _handleMenuStart;
 
 };
 

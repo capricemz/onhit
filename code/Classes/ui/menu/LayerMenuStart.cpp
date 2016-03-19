@@ -25,23 +25,23 @@ bool LayerMenuStart::init()
 	{
 		CC_BREAK_IF(!Layer::init());
 
-		_skin = (Layer *)CSLoader::createNode(RES_LAYER_MAIN);
+		_skin = (Layer*)CSLoader::createNode(RES_LAYER_MAIN);
 		addChild(_skin);
 
-		auto btn = (Button *)_skin->getChildByName(btn0);
-		btn->setTitleText(VALUE_MENU_START);
+		auto btn = (Button*)_skin->getChildByName(btn0);
+		btn->setTitleText(STR_MENU_START);
 		btn->addTouchEventListener(CC_CALLBACK_2(LayerMenuStart::onTouchBtn, this));
 		
-		btn = (Button *)_skin->getChildByName(btn1);
-		btn->setTitleText(VALUE_MENU_SAVE_LOAD);
+		btn = (Button*)_skin->getChildByName(btn1);
+		btn->setTitleText(STR_MENU_SAVE_LOAD);
 		btn->addTouchEventListener(CC_CALLBACK_2(LayerMenuStart::onTouchBtn, this));
 		
-		btn = (Button *)_skin->getChildByName(btn2);
-		btn->setTitleText(VALUE_MENU_SETTING);
+		btn = (Button*)_skin->getChildByName(btn2);
+		btn->setTitleText(STR_MENU_SETTING);
 		btn->addTouchEventListener(CC_CALLBACK_2(LayerMenuStart::onTouchBtn, this));
 
-		_handleMenuStart = new HandleMenuStart();
-		CC_SAFE_RETAIN(_handleMenuStart);
+		_handleMenuStart = HandleMenuStart::create();
+		_handleMenuStart->retain();
 		_handleMenuStart->setLayerMenuStart(this);
 
 		isInit = true;
@@ -50,11 +50,11 @@ bool LayerMenuStart::init()
 	return isInit;
 }
 
-void LayerMenuStart::onTouchBtn(cocos2d::Ref *ref, cocos2d::ui::Widget::TouchEventType type)
+void LayerMenuStart::onTouchBtn(cocos2d::Ref* ref, cocos2d::ui::Widget::TouchEventType type)
 {
 	if (type == Widget::TouchEventType::ENDED)
 	{
-		auto btn = (Button *)ref;
+		auto btn = (Button*)ref;
 		auto name = btn->getName();
 		if (name == btn0)
 		{

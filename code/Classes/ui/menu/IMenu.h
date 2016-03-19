@@ -6,7 +6,7 @@
 class ILayerMenuStart
 {
 public:
-	virtual cocos2d::Layer * getSkin() { return nullptr; }
+	virtual cocos2d::Layer* getSkin() { return nullptr; }
 };
 
 #endif

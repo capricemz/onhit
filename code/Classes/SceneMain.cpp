@@ -1,15 +1,17 @@
 #include "SceneMain.h"
-#include "core/LayerEntity.h"
-#include "ui/menu/LayerMenuStart.h"
+#include "core/entity/LayerEntity.h"
 
 USING_NS_CC;
 
-SceneMain::SceneMain()
+SceneMain::SceneMain() : _layerMenuStart(nullptr), _handleSceneMain(nullptr)
 {
 }
 
 SceneMain::~SceneMain()
 {
+	_layerMenuStart = nullptr;
+
+	CC_SAFE_RELEASE_NULL(_handleSceneMain);
 }
 
 
@@ -24,11 +26,29 @@ bool SceneMain::init()
 		auto layerEntity = LayerEntity::create();
 		addChild(layerEntity);
 
-		auto layerMenuStart = LayerMenuStart::create();
-		addChild(layerMenuStart);
+		layerMenuStartAdd();
+
+		_handleSceneMain = HandleSceneMain::create();
+		_handleSceneMain->retain();
+		_handleSceneMain->setSceneMain(this);
 
 		isInit = true;
 	} while (0);
 
 	return isInit;
+}
+
+void SceneMain::layerMenuStartAdd()
+{
+	_layerMenuStart = LayerMenuStart::create();
+	addChild(_layerMenuStart);
+}
+
+void SceneMain::layerMenuStartRemove()
+{
+	if (_layerMenuStart)
+	{
+		_layerMenuStart->removeFromParent();
+		_layerMenuStart = nullptr;
+	}
 }

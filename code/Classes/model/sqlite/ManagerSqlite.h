@@ -7,7 +7,7 @@
 class ManagerSqlite
 {
 public:
-	static ManagerSqlite *getInstance();//提供getInstance全局指针
+	static ManagerSqlite* getInstance();//提供getInstance全局指针
 	static void destroyInstance();
 
 	~ManagerSqlite();
@@ -22,7 +22,7 @@ public:
 private:
 	ManagerSqlite();
 
-	sqlite3 *_dataBase;//数据库指针
+	sqlite3* _dataBase;//数据库指针
 
 };
 

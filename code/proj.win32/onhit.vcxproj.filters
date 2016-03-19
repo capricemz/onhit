@@ -52,6 +52,12 @@
     <Filter Include="src\ui\menu">
       <UniqueIdentifier>{72aab70b-baa6-4b24-b886-e00d297d9160}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\core\entity\subs">
+      <UniqueIdentifier>{fa2be462-897f-4a76-98e4-a63f2343d10a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\core\entity\box2d">
+      <UniqueIdentifier>{29970448-3416-44c3-88ba-d587fdf93990}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -84,18 +90,6 @@
     <ClCompile Include="..\Classes\common\util\UtilString.cpp">
       <Filter>src\common\util</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\core\LayerEntity.cpp">
-      <Filter>src\core</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\core\entity\Creature.cpp">
-      <Filter>src\core\entity</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\core\entity\Entity.cpp">
-      <Filter>src\core\entity</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\core\entity\Unit.cpp">
-      <Filter>src\core\entity</Filter>
-    </ClCompile>
     <ClCompile Include="..\Classes\model\sqlite\ManagerSqlite.cpp">
       <Filter>src\model\sqlite</Filter>
     </ClCompile>
@@ -114,8 +108,26 @@
     <ClCompile Include="..\Classes\ui\ManagerUI.cpp">
       <Filter>src\ui</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\core\HandleEntity.cpp">
-      <Filter>src\core</Filter>
+    <ClCompile Include="..\Classes\HandleSceneMain.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\core\entity\Creature.cpp">
+      <Filter>src\core\entity\subs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\core\entity\Entity.cpp">
+      <Filter>src\core\entity\subs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\core\entity\Unit.cpp">
+      <Filter>src\core\entity\subs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\core\entity\HandleEntity.cpp">
+      <Filter>src\core\entity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\core\entity\LayerEntity.cpp">
+      <Filter>src\core\entity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\core\entity\HandleBox2d.cpp">
+      <Filter>src\core\entity\box2d</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -149,18 +161,6 @@
     <ClInclude Include="..\Classes\common\util\UtilString.h">
       <Filter>src\common\util</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\core\LayerEntity.h">
-      <Filter>src\core</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\core\entity\Creature.h">
-      <Filter>src\core\entity</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\core\entity\Entity.h">
-      <Filter>src\core\entity</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\core\entity\Unit.h">
-      <Filter>src\core\entity</Filter>
-    </ClInclude>
     <ClInclude Include="..\Classes\model\sqlite\ManagerSqlite.h">
       <Filter>src\model\sqlite</Filter>
     </ClInclude>
@@ -188,11 +188,32 @@
     <ClInclude Include="..\Classes\ui\ManagerUI.h">
       <Filter>src\ui</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\core\ILayerEntity.h">
-      <Filter>src\core</Filter>
+    <ClInclude Include="..\Classes\HandleSceneMain.h">
+      <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\core\HandleEntity.h">
-      <Filter>src\core</Filter>
+    <ClInclude Include="..\Classes\ISceneMain.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\core\entity\Creature.h">
+      <Filter>src\core\entity\subs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\core\entity\Entity.h">
+      <Filter>src\core\entity\subs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\core\entity\Unit.h">
+      <Filter>src\core\entity\subs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\core\entity\LayerEntity.h">
+      <Filter>src\core\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\core\entity\HandleEntity.h">
+      <Filter>src\core\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\core\entity\ILayerEntity.h">
+      <Filter>src\core\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\core\entity\HandleBox2d.h">
+      <Filter>src\core\entity\box2d</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

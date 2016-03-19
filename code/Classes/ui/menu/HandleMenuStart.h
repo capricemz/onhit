@@ -12,17 +12,16 @@ public:
 	HandleMenuStart();
 	~HandleMenuStart();
 
-	virtual bool init();
-
 	void gameStart();
 	void gameSaveLoad();
 	void gameSetting();
 
-	ILayerMenuStart * getLayerMenuStart() const { return _layerMenuStart; }
-	void setLayerMenuStart(ILayerMenuStart * val) { _layerMenuStart = val; }
+	virtual bool init();
+
+	CC_SYNTHESIZE(ILayerMenuStart*, _layerMenuStart, LayerMenuStart);
 
 private:
-	ILayerMenuStart *_layerMenuStart;
+	
 };
 
 #endif

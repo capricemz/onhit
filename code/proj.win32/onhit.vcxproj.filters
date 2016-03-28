@@ -58,6 +58,9 @@
     <Filter Include="src\core\entity\box2d">
       <UniqueIdentifier>{29970448-3416-44c3-88ba-d587fdf93990}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\core\main">
+      <UniqueIdentifier>{72b856bb-794a-46ea-9aeb-9310f5114182}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -67,9 +70,6 @@
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\HelloWorldScene.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\SceneMain.cpp">
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\common\observer\Observer.cpp">
@@ -105,12 +105,6 @@
     <ClCompile Include="..\Classes\ui\menu\LayerMenuStart.cpp">
       <Filter>src\ui\menu</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\ui\ManagerUI.cpp">
-      <Filter>src\ui</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\HandleSceneMain.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
     <ClCompile Include="..\Classes\core\entity\Creature.cpp">
       <Filter>src\core\entity\subs</Filter>
     </ClCompile>
@@ -129,6 +123,15 @@
     <ClCompile Include="..\Classes\core\entity\HandleBox2d.cpp">
       <Filter>src\core\entity\box2d</Filter>
     </ClCompile>
+    <ClCompile Include="..\Classes\core\main\HandleSceneMain.cpp">
+      <Filter>src\core\main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\core\main\SceneMain.cpp">
+      <Filter>src\core\main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\core\ManagerHandle.cpp">
+      <Filter>src\core</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
@@ -138,9 +141,6 @@
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\HelloWorldScene.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\SceneMain.h">
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\common\observer\Observer.h">
@@ -185,15 +185,6 @@
     <ClInclude Include="..\Classes\ui\menu\LayerMenuStart.h">
       <Filter>src\ui\menu</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\ui\ManagerUI.h">
-      <Filter>src\ui</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\HandleSceneMain.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\ISceneMain.h">
-      <Filter>src</Filter>
-    </ClInclude>
     <ClInclude Include="..\Classes\core\entity\Creature.h">
       <Filter>src\core\entity\subs</Filter>
     </ClInclude>
@@ -214,6 +205,18 @@
     </ClInclude>
     <ClInclude Include="..\Classes\core\entity\HandleBox2d.h">
       <Filter>src\core\entity\box2d</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\core\main\HandleSceneMain.h">
+      <Filter>src\core\main</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\core\main\ISceneMain.h">
+      <Filter>src\core\main</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\core\main\SceneMain.h">
+      <Filter>src\core\main</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\core\ManagerHandle.h">
+      <Filter>src\core</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

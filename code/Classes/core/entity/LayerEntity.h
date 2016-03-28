@@ -14,10 +14,10 @@ public:
 	LayerEntity();
 	~LayerEntity();
 
+	virtual bool init();
 	virtual void startEngine();
 	virtual void spriteAdd(const cocos2d::Vec2& location);
 
-	virtual bool init();
 	virtual bool onTouchBegan(cocos2d::Touch *touch, cocos2d::Event *event);
 	virtual void update(float dt);
 

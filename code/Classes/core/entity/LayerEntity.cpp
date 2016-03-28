@@ -13,22 +13,6 @@ LayerEntity::~LayerEntity()
 	CC_SAFE_RELEASE_NULL(_handleBox2d);
 }
 
-void LayerEntity::startEngine()
-{
-	scheduleUpdate();//开始游戏循环
-}
-
-void LayerEntity::spriteAdd(const cocos2d::Vec2& location)
-{
-	log("Add sprite %0.2f x %0.2f", location.x, location.y);
-
-	auto sprite = Sprite::create(RES_ENTITY);
-	sprite->setPosition(Vec2(location.x, location.y));
-	addChild(sprite);
-
-	_handleBox2d->createBody(sprite);
-}
-
 bool LayerEntity::init()
 {
 	auto isInit = false;
@@ -53,6 +37,22 @@ bool LayerEntity::init()
 	} while (0);
 
 	return isInit;
+}
+
+void LayerEntity::startEngine()
+{
+	scheduleUpdate();//开始游戏循环
+}
+
+void LayerEntity::spriteAdd(const cocos2d::Vec2& location)
+{
+	log("Add sprite %0.2f x %0.2f", location.x, location.y);
+
+	auto sprite = Sprite::create(RES_ENTITY);
+	sprite->setPosition(Vec2(location.x, location.y));
+	addChild(sprite);
+
+	_handleBox2d->createBody(sprite);
 }
 
 bool LayerEntity::onTouchBegan(Touch *touch, Event *event)

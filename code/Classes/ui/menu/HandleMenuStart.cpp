@@ -1,6 +1,6 @@
 #include "HandleMenuStart.h"
 #include "model/define/DfinesValue.h"
-#include "ui/ManagerUI.h"
+#include "core/ManagerHandle.h"
 
 HandleMenuStart::HandleMenuStart() : _layerMenuStart(nullptr)
 {
@@ -13,7 +13,7 @@ HandleMenuStart::~HandleMenuStart()
 
 void HandleMenuStart::gameStart()
 {
-	auto managerUI = ManagerUI::getInstance();
+	auto managerUI = ManagerHandle::getInstance();
 	managerUI->notify((int)ID_OBSERVER::HANDLE_LAYER_ENTITY, TYPE_OBSERVER_HANDLE_ENTITY::LAYER_ENTITY_START_ENGINE);
 	managerUI->notify((int)ID_OBSERVER::HANDLE_SCENE_MAIN, TYPE_OBSERVER_HANDLE_SCENE_MAIN::LAYER_MENU_START_REMOVE);
 }

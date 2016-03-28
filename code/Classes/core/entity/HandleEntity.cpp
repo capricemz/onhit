@@ -1,5 +1,5 @@
 #include "HandleEntity.h"
-#include "ui/ManagerUI.h"
+#include "core/ManagerHandle.h"
 #include "model/define/DfinesValue.h"
 
 USING_NS_CC;
@@ -10,7 +10,7 @@ HandleEntity::HandleEntity() : _layerEntity(nullptr)
 
 HandleEntity::~HandleEntity()
 {
-	ManagerUI::getInstance()->detach(this);
+	ManagerHandle::getInstance()->detach(this);
 
 	_layerEntity = nullptr;
 }
@@ -27,7 +27,7 @@ bool HandleEntity::init()
 	do
 	{
 		idObserverSet((int)ID_OBSERVER::HANDLE_LAYER_ENTITY);
-		ManagerUI::getInstance()->attach(this);
+		ManagerHandle::getInstance()->attach(this);
 
 		isInit = true;
 	} while (0);
@@ -41,7 +41,7 @@ void HandleEntity::updateBySubject(va_list values)
 	switch (type)
 	{
 	case TYPE_OBSERVER_HANDLE_ENTITY::LAYER_ENTITY_START_ENGINE:
-		getLayerEntity()->startEngine();
+		_layerEntity->startEngine();
 		break;
 	default:
 		break;

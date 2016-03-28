@@ -1,5 +1,5 @@
 #include "HandleSceneMain.h"
-#include "ui/ManagerUI.h"
+#include "core/ManagerHandle.h"
 #include "model/define/DfinesValue.h"
 
 USING_NS_CC;
@@ -10,7 +10,7 @@ HandleSceneMain::HandleSceneMain() : _sceneMain(nullptr)
 
 HandleSceneMain::~HandleSceneMain()
 {
-	ManagerUI::getInstance()->detach(this);
+	ManagerHandle::getInstance()->detach(this);
 
 	_sceneMain = nullptr;
 }
@@ -22,7 +22,7 @@ bool HandleSceneMain::init()
 	do
 	{
 		idObserverSet((int)ID_OBSERVER::HANDLE_SCENE_MAIN);
-		ManagerUI::getInstance()->attach(this);
+		ManagerHandle::getInstance()->attach(this);
 
 		isInit = true;
 	} while (0);

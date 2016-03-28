@@ -1,6 +1,6 @@
 #include "AppDelegate.h"
 #include "HelloWorldScene.h"
-#include "SceneMain.h"
+#include "core/main/SceneMain.h"
 
 USING_NS_CC;
 

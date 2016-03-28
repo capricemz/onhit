@@ -1,5 +1,5 @@
-#ifndef __HANDLE_SCENE_MAIN__
-#define __HANDLE_SCENE_MAIN__
+#ifndef __CORE_MAIN_HANDLE_SCENE_MAIN__
+#define __CORE_MAIN_HANDLE_SCENE_MAIN__
 
 #include "cocos2d.h"
 #include "ISceneMain.h"

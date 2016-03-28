@@ -1,8 +1,6 @@
 ﻿#ifndef __MODEL_DEFINE_DEFINE_VALUES_H__
 #define __MODEL_DEFINE_DEFINE_VALUES_H__
 
-#include <string>
-
 #define NUM_GRAVITY -10.0f
 #define NUM_PTM_RATIO 32.0f//像素到米的转化值
 #define NUM_VELOCITY_ITERATIONS 8//
